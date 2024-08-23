@@ -3,11 +3,9 @@
 First, ensure you have the necessary dependencies installed:
 
 ```sh
-sudo apt update
-sudo apt install -y git curl build-essential libssl-dev zlib1g-dev \
-libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncurses5-dev \
-libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl \
-libxml2-dev libxslt1-dev
+sudo dnf update
+sudo dnf install -y git curl gcc make zlib-devel bzip2 bzip2-devel readline-devel \
+sqlite-devel openssl-devel xz xz-devel libffi-devel tk-devel
 ```
 
 ### Step 2: Install `pyenv` and `pyenv-virtualenv`
@@ -53,7 +51,7 @@ source ~/.bashrc
 1. **Install `direnv`:**
 
 ```sh
-sudo apt install direnv
+sudo dnf install direnv
 ```
 
 2. **Add `direnv` to your shell configuration:**
@@ -159,4 +157,3 @@ pyenv uninstall my_project
 ```sh
 pyenv uninstall 3.9.7
 ```
-
